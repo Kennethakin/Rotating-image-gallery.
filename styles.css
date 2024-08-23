@@ -1,27 +1,27 @@
-/* Basic reset and layout setup */
+
 body {
     margin: 0;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    min-height: 100vh; /* Full viewport height */
+    flex-direction: column; 
+    min-height: 100vh; 
     background-color: black;
-    overflow: hidden; /* Prevent scrollbars */
-    justify-content: space-between; /* Push footer to the bottom */
+    overflow: hidden; 
+    justify-content: space-between; 
 }
 
-/* Gallery container setup */
+
 .gallery-container {
     position: relative;
-    width: 80vw; /* Responsive width */
-    height: 80vw; /* Aspect ratio 1:1 */
-    max-width: 600px; /* Maximum width */
-    max-height: 600px; /* Maximum height */
+    width: 80vw; 
+    height: 80vw; 
+    max-width: 600px; 
+    max-height: 600px; 
     perspective: 1000px;
-    margin: 0 auto; /* Center horizontally */
-    flex: 1; /* Allow to grow and push footer down */
+    margin: 0 auto; 
+    flex: 1; 
 }
 
-/* Gallery setup */
+
 .gallery {
     position: absolute;
     width: 100%;
@@ -33,29 +33,29 @@ body {
     transition: transform 1s ease-in-out;
 }
 
-/* Image styling */
+
 .gallery img {
     position: absolute;
-    width: 200px; /* Adjust based on your needs */
-    height: 200px; /* Adjust based on your needs */
+    width: 200px; 
+    height: 200px; 
     object-fit: cover;
     backface-visibility: hidden;
-    transform: rotateY(calc(360deg / var(--total-images) * var(--index))) translateZ(300px); /* Adjust translateZ to fit images */
+    transform: rotateY(calc(360deg / var(--total-images) * var(--index))) translateZ(300px); 
 }
 
-/* Control buttons setup */
+
 .controls {
     position: absolute;
     top: 50%;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Space out the buttons */
-    transform: translateY(-50%); /* Center vertically */
+    justify-content: space-between; 
+    transform: translateY(-50%); 
     padding: 0 10px;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box; 
 }
 
-/* Button styling */
+
 button {
     padding: 10px 20px;
     border: none;
@@ -64,7 +64,7 @@ button {
     color: black;
     cursor: pointer;
     font-size: 16px;
-    max-width: 120px; /* Ensure button doesn't exceed this width */
+    max-width: 120px; 
 }
 
 button:hover {
@@ -72,22 +72,22 @@ button:hover {
 }
 
 #prev {
-    background-color: #f44336; /* Red background for "Prev" button */
+    background-color: #f44336; 
 }
 
 #prev:hover {
-    background-color: #d32f2f; /* Darker red on hover */
+    background-color: #d32f2f; 
 }
 
 #next {
-    background-color: #4caf50; /* Green background for "Next" button */
+    background-color: #4caf50; 
 }
 
 #next:hover {
-    background-color: #388e3c; /* Darker green on hover */
+    background-color: #388e3c; 
 }
 
-/* Footer styles */
+
 .footer {
     background-color: #333;
     color: white;
@@ -95,10 +95,10 @@ button:hover {
     padding: 10px 0;
     font-size: 14px;
     width: 100%;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box; 
 }
 
-/* Responsive styles for medium screens and below */
+
 @media (max-width: 768px) {
     .gallery-container {
         width: 90vw;
@@ -124,8 +124,5 @@ button:hover {
         max-width: 80px;
     }
 
-    .footer {
-        font-size: 12px; /* Adjust font size for small screens */
-        padding: 8px 0; /* Adjust padding */
-    }
+    
 }
